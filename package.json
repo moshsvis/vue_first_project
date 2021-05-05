@@ -1,0 +1,89 @@
+{
+  "name": "cratehackers",
+  "version": "0.1.11",
+  "private": false,
+  "description": "crate hackers",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "core-js": "^3.6.5",
+    "easymidi": "^2.0.1",
+    "electron-is-dev": "^1.2.0",
+    "electron-log": "^4.3.1",
+    "electron-simple-updater": "^2.0.9",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^6.0.1",
+    "electron-updater": "^4.3.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "fuse.js": "^6.4.3",
+    "lodash": "^4.17.20",
+    "m3u": "0.0.2",
+    "minisearch": "^3.0.2",
+    "music-metadata": "^7.5.2",
+    "remote": "^0.2.6",
+    "sqlite3": "^5.0.0",
+    "update-electron-app": "^2.0.1",
+    "vue": "^2.6.12",
+    "vue-fuse": "^2.2.1",
+    "vue-router": "^3.2.0",
+    "vue-stripe-checkout": "^3.5.13",
+    "vue-toast-notification": "^0.6.0",
+    "vuex": "^3.6.0",
+    "wavesurfer.js": "^4.3.0",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "electron": "^11.0.3",
+    "electron-devtools-installer": "^3.1.0",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.5",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "mac": {
+    "target": [
+      "dmg",
+      "zip"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Glenn-Frank/ch.git"
+  },
+    "publish": {
+    "provider": "github",
+    "releaseType": "release"
+},
+"build": {
+  "productName": "Crate Hackers",
+  "appId": "com.glenn-frank.cratehackers",
+  "directories": {
+      "output": "build"
+  },
+  "files": [
+      "dist/electron/**/*"
+  ],
+  "win": {
+      "icon": "build/icons/icon.ico",
+  "publish": [
+          "github"
+      ]
+  }
+}
+}
